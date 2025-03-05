@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.CnPnaHem.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"sidebars/guides/git.md","filePath":"sidebars/guides/git.md"}'),a={name:"sidebars/guides/git.md"};function r(i,o,d,c,n,p){return s(),t("div")}const f=e(a,[["render",r]]);export{m as __pageData,f as default};
