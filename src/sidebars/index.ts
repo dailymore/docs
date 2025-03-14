@@ -7,21 +7,25 @@ const sidebarsDir = path.resolve(__dirname, '../sidebars')
 
 const order = ['installations', 'guides']
 
-export default Object.entries(
-  getMdFiles(sidebarsDir).reduce(
-    (acc, { category, text, link }) => {
-      if (!acc[category]) acc[category] = []
-      acc[category].push({ text, link })
+const groupedFiles = getMdFiles(sidebarsDir).reduce(
+  (acc, { category, text, link }) => {
+    if (!acc[category]) acc[category] = []
+    acc[category].push({ text, link })
 
-      return acc
-    },
-    {} as Record<string, { text: string; link: string }[]>,
-  ),
+    return acc
+  },
+  {} as Record<string, any[]>,
 )
 
-  .sort(([categoryA], [categoryB]) => order.indexOf(categoryA) - order.indexOf(categoryB))
+let sidebars
 
-  .map(([category, items]) => ({
-    text: formatFileName(category),
-    items,
-  })) as DefaultTheme.Sidebar
+sidebars = Object.entries(groupedFiles).sort(
+  ([categoryA], [categoryB]) => order.indexOf(categoryA) - order.indexOf(categoryB),
+)
+
+sidebars = sidebars.map(([category, items]) => ({
+  text: formatFileName(category),
+  items,
+}))
+
+export default sidebars as DefaultTheme.Sidebar
