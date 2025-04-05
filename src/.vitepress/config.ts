@@ -2,14 +2,17 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 import { defineConfig } from 'vitepress'
 import Sidebars from '../sidebars/index'
+import dotenv from 'dotenv'
 
 // server side
 // cần khởi động lại dev nếu thay đổi trong file này
 
+dotenv.config()
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Documents',
-  base: '/docs/',
+  base: `/${process.env.BASE_URL}/` || '/docs/',
   outDir: '../dist',
   description: 'NDMC life script',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: './assets/icons/honor.svg' }]],

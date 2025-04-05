@@ -12,14 +12,16 @@
     "build": "vitepress build src",
     "preview": "vitepress preview src"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.0.8",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.5",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.4.0",
     "@vue/tsconfig": "^0.7.0",
-    "@tailwindcss/vite": "^4.0.8",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.20.1",
     "eslint-plugin-oxlint": "^0.15.10",
