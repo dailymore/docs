@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import path from 'path'
 
 import type { DefaultTheme } from 'vitepress'
@@ -5,7 +6,7 @@ import { formatFileName, getMdFiles } from '../utils/getFilesMd'
 
 const sidebarsDir = path.resolve(__dirname, '../sidebars')
 
-const order = ['installations', 'guides']
+const order = ['guides', 'installations']
 
 const groupedFiles = getMdFiles(sidebarsDir).reduce(
   (acc, { category, text, link }) => {
