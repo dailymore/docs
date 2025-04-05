@@ -1,7 +1,5 @@
 # 🌐 Free Online Databases (Hosted)
 
-Danh sách các dịch vụ **database online miễn phí** và được **host sẵn**, bạn có thể kết nối qua internet dễ dàng mà không cần tự cài đặt server.
-
 ---
 
 ## 🔸 1. MongoDB Atlas
