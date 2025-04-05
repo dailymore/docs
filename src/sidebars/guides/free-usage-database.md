@@ -8,7 +8,7 @@
 - ✅ Free tier:
   - 512MB storage
   - 100 concurrent connections
-- 🌐 Kết nối: `mongodb+srv://...`
+- 🌐 Kết nối: `mongodb+srv://user:pass@cluster.mongodb.net/dbname`
 - UI trực quan, dễ dùng
 - 📎 Link: https://www.mongodb.com/cloud/atlas
 
