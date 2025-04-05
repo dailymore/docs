@@ -1,4 +1,4 @@
-# **Nuxt.js 3 **
+# Nuxt.js
 
 ## **1. Cơ bản**
 
