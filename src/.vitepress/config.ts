@@ -12,7 +12,7 @@ dotenv.config()
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Documents',
-  base: '/docs-v2/',
+  base: '/docs/',
   outDir: '../dist',
   description: 'NDMC life script',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: './assets/icons/honor.svg' }]],
