@@ -6,7 +6,7 @@ import { formatFileName, getMdFiles } from '../utils/getFilesMd'
 
 const sidebarsDir = path.resolve(__dirname, '../sidebars')
 
-const order = ['guides', 'installations']
+const order = ['technical-architecture', 'guides', 'installations', 'interview']
 
 const groupedFiles = getMdFiles(sidebarsDir).reduce(
   (acc, { category, text, link }) => {
