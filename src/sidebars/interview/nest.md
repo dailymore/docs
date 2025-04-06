@@ -1,4 +1,4 @@
-# NestJS and Vue.js Interview Questions
+# NestJS
 
 ## 🔧 NestJS (Backend)
 
