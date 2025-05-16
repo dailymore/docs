@@ -67,6 +67,43 @@ node -v
 ```
 v22.14.0
 ```
+Tự động chuyển Node Version khi cd vào thư mục
+- Thêm vào ~/.zshrc hoặc ~/.bashrc
+
+#### bash
+```bash
+# Tự động sử dụng Node từ .nvmrc nếu có (bash)
+cdnvm() {
+    cd "$@" || return $?
+    if [[ -f .nvmrc && -r .nvmrc ]]; then
+        nvm use
+    fi
+}
+alias cd='cdnvm'
+```
+#### zsh
+```zsh
+# Tự động sử dụng Node từ .nvmrc khi chuyển thư mục
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+```
 
 ---
 
