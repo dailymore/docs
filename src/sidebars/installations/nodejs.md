@@ -68,7 +68,7 @@ node -v
 v22.14.0
 ```
 Tự động chuyển Node Version khi cd vào thư mục
-- Thêm vào ~/.zshrc hoặc ~/.bashrc
+- Thêm vào cuối file ~/.zshrc hoặc ~/.bashrc
 
 #### bash
 ```bash
